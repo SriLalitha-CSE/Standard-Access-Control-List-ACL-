@@ -1,0 +1,107 @@
+# Extended Access Control List (ACL)
+
+##  Overview
+
+An **Extended Access Control List (Extended ACL)** is a network security feature used in Cisco routers to control the flow of traffic between networks. Unlike a Standard ACL, which filters traffic only based on the **source IP address**, an Extended ACL can filter packets using multiple criteria such as:
+
+- Source IP address
+- Destination IP address
+- Protocol (TCP, UDP, ICMP, IP)
+- Port numbers (HTTP, HTTPS, FTP, etc.)
+
+This provides much finer control over network access and helps improve security.
+
+---
+
+## Why Use an Extended ACL?
+
+Extended ACLs are used to:
+
+- Improve network security.
+- Allow or block specific types of network traffic.
+- Restrict access to particular servers or services.
+- Prevent unauthorized communication between networks.
+- Control application-specific traffic such as HTTP, FTP, or SSH.
+
+---
+
+## Features
+
+- Filters based on both source and destination IP addresses.
+- Supports protocol-based filtering (TCP, UDP, ICMP, etc.).
+- Can filter traffic based on port numbers.
+- Offers more flexibility than Standard ACLs.
+- Helps enforce organizational security policies.
+
+---
+
+## How Extended ACL Works
+
+When a packet reaches a router interface where an Extended ACL is applied, the router compares the packet against each ACL entry from top to bottom.
+
+- If the packet matches a **permit** statement, it is forwarded.
+- If it matches a **deny** statement, it is discarded.
+- If no rule matches, an implicit **deny all** is applied automatically at the end of every ACL.
+
+---
+
+## Common Protocols Used
+
+| Protocol | Purpose |
+|----------|---------|
+| IP | Matches all IP traffic |
+| TCP | Web, SSH, FTP, Email |
+| UDP | DNS, DHCP, Streaming |
+| ICMP | Ping and network diagnostics |
+
+---
+
+## Advantages
+
+- Provides detailed traffic filtering.
+- Enhances network security.
+- Reduces unauthorized access.
+- Controls access to specific applications and services.
+- Supports enterprise network security policies.
+
+---
+
+## Limitations
+
+- Configuration becomes complex in large networks.
+- Rule order is important.
+- Incorrect ACL placement may block legitimate traffic.
+- Every ACL ends with an implicit **deny all** statement.
+
+---
+
+## Best Practice
+
+Extended ACLs should generally be placed **as close to the source of the traffic as possible**. This prevents unwanted traffic from consuming network bandwidth before it is blocked.
+
+---
+
+## Difference Between Standard ACL and Extended ACL
+
+| Standard ACL | Extended ACL |
+|--------------|--------------|
+| Filters only by source IP address | Filters by source IP, destination IP, protocol, and ports |
+| Less flexible | More flexible |
+| Usually placed near the destination | Usually placed near the source |
+| Uses ACL numbers 1–99 and 1300–1999 | Uses ACL numbers 100–199 and 2000–2699 |
+
+---
+
+## Applications
+
+- Restricting access to servers
+- Blocking specific applications
+- Allowing only certain departments to access resources
+- Filtering HTTP, FTP, SSH, or ICMP traffic
+- Improving enterprise network security
+
+---
+
+## Conclusion
+
+Extended ACLs provide powerful and flexible traffic filtering by evaluating multiple packet fields. They are widely used in enterprise networks to implement security policies, control access to network resources, and protect critical systems from unauthorized communication.
