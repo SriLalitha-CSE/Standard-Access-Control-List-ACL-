@@ -91,7 +91,6 @@ Extended ACLs should generally be placed **as close to the source of the traffic
 | Uses ACL numbers 1–99 and 1300–1999 | Uses ACL numbers 100–199 and 2000–2699 |
 
 ---
-
 ## Applications
 
 - Restricting access to servers
@@ -101,7 +100,6 @@ Extended ACLs should generally be placed **as close to the source of the traffic
 - Improving enterprise network security
 
 ---
-
 ## Conclusion
 
 Extended ACLs provide powerful and flexible traffic filtering by evaluating multiple packet fields. They are widely used in enterprise networks to implement security policies, control access to network resources, and protect critical systems from unauthorized communication.
